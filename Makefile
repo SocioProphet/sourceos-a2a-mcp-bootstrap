@@ -13,4 +13,5 @@ ci-local:
 	python3 tools/verify_carrier.py out/carriers || true
 
 verify:
+	pip3 install pynacl >/dev/null
 	python3 tools/verify_carrier.py
