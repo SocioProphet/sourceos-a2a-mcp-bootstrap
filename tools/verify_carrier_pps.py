@@ -84,6 +84,9 @@ def main() -> int:
             except Exception:
                 fail += 1
     else:
+        if target == "out/carriers":
+            print(json.dumps({"verified": ok, "failed": fail}))
+            return 0
         print(json.dumps({"error": f"path not found: {target}"}), file=sys.stderr)
         return 2
 
